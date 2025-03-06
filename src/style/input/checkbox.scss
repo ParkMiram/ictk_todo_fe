@@ -39,6 +39,8 @@
 }
 
 .checkbox[type="checkbox"]:checked + .checkboxLabel {
-  color: $black50;
-  text-decoration: line-through;
+  &.todoCheckLabel {
+    color: $black50;
+    text-decoration: line-through;
+  }
 }

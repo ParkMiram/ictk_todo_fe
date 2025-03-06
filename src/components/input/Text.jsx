@@ -8,13 +8,6 @@ import basic from '../../assets/images/icon.svg';
 import init from '../../assets/images/delete.svg';
 
 const Text = ({ value, label, borderColor, setStyle, onDelete, setIcon, disabled, readOnly, className, ...props }) => {
-    /*
-        setStyle 종류
-        1. outside (기본값) : 상 - 라벨, 하 - 인풋
-        2. outsideLeft : 좌(바깥) - 라벨, 우 - 인풋
-        3. inside : 좌(안) - 라벨, 우 - 인풋
-        4. icon : 좌(안) - 아이콘이미지, 우 - 인풋
-     */
 
     // borderColor
     const handleFocus = (event) => {
@@ -32,8 +25,10 @@ const Text = ({ value, label, borderColor, setStyle, onDelete, setIcon, disabled
         event.currentTarget.style.transition = "0.1s ease-in-out";
     };
 
+    // input에 접근
     const inputRef = useRef(null);
 
+    // 삭제 버튼을 눌러도 input에 focus 유지
     const handleButtonClickFocusInput = () => {
         onDelete && onDelete();
         if (inputRef.current) {

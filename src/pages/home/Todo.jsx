@@ -153,6 +153,7 @@ const Todo = ({ selectedDate }) => {
                                                         label={todo?.todoTitle}
                                                         checked={todo?.completed}
                                                         onClick={() => updateTodo(todo?.todoId, todo?.todoTitle, !todo?.completed)}
+                                                        className={"todoCheckLabel"}
                                                     />
                                                     <Button
                                                         label={"✏️"}
@@ -233,7 +234,8 @@ const Todo = ({ selectedDate }) => {
                     message={confirmMessage}
                     setIsConfirm={setIsConfirm}
                     title={"🗑️ TODO 삭제"}
-                    label={"삭제"}
+                    button={"삭제"}
+                    type={"warning"}
                 />
             }
             {showAlert &&

@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import '../../style/alert/alertCommon.css';
 import '../../style/alert/confirm.css';
 
-const Confirm = ({ setShowConfirm, message, title="📢 알림", label, setIsConfirm, ...props}) => {
+const Confirm = ({ setShowConfirm, message, title="📢 알림", button, setIsConfirm, type, ...props}) => {
     // state
     const [isExiting, setIsExiting] = useState(false);
 
@@ -41,8 +41,8 @@ const Confirm = ({ setShowConfirm, message, title="📢 알림", label, setIsCon
                         {...props}
                     />
                     <Button
-                        label={label}
-                        type={"warning"}
+                        label={button}
+                        type={type}
                         onClick={handleConfirm}
                         {...props}
                     />

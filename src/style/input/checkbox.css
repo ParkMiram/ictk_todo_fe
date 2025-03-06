@@ -37,7 +37,7 @@
   font-size: 0.875rem;
 }
 
-.checkbox[type=checkbox]:checked + .checkboxLabel {
+.checkbox[type=checkbox]:checked + .checkboxLabel.todoCheckLabel {
   color: #778088;
   text-decoration: line-through;
 }

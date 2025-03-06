@@ -90,6 +90,11 @@
   }
   // icon
   &.icon {
+    .label {
+      width: $px20;
+      height: $px20;
+      margin-left: $px10;
+    }
     // select
     .selectContainer {
       .selectWrap {

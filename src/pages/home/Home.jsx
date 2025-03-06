@@ -63,7 +63,8 @@ const Home = () => {
                     message={confirmMessage}
                     setIsConfirm={setIsConfirm}
                     title={"⏻ 로그아웃"}
-                    label={"로그아웃"}
+                    button={"로그아웃"}
+                    type={"warning"}
                 />
             }
         </>

@@ -1,0 +1,25 @@
+@import "../root";
+
+.loginContainer {
+  width: 100%;
+  height: 100%;
+  @include middleCenter;
+  flex-direction: column;
+  .title {
+    font-size: 30px;
+    margin-bottom: $px20;
+    b {
+      color: $mainColor;
+    }
+  }
+  .loginInput {
+    margin-bottom: $px5;
+    min-width: 300px;
+    max-width: 300px;
+  }
+  .buttonWrap {
+    margin-top: $px10;
+    width: 300px;
+    height: 40px;
+  }
+}

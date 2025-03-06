@@ -1,0 +1,10 @@
+.confirmButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.confirmButton .buttonWrap:first-child {
+  margin-right: 0.625rem;
+}
+
+/*# sourceMappingURL=confirm.css.map */

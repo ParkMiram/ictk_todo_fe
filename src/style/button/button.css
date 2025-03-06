@@ -1,0 +1,41 @@
+.buttonWrap .button {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+.buttonWrap .button.primary {
+  color: #FFFFFF;
+  background-color: #0056ff;
+}
+.buttonWrap .button.primary:hover {
+  background-color: #0a35a0;
+}
+.buttonWrap .button.primary:focus {
+  outline: 3px solid rgba(0, 86, 255, 0.3);
+}
+.buttonWrap .button.sub {
+  background-color: #E6E8EB;
+}
+.buttonWrap .button.sub:hover {
+  background-color: #CCD1D7;
+}
+.buttonWrap .button.sub:focus {
+  outline: 3px solid #F2F4F5;
+}
+.buttonWrap .button.warning {
+  background-color: #FFE5E5;
+  color: #FF3333;
+}
+.buttonWrap .button.warning:hover {
+  background-color: #FFCCCC;
+}
+.buttonWrap .button.warning:focus {
+  outline: 3px solid #FFF2F2;
+}
+.buttonWrap .button:active {
+  transform: scale(95%);
+}
+
+/*# sourceMappingURL=button.css.map */

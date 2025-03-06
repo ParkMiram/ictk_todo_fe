@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body #root {
+  width: 100%;
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}
+button:hover, button:focus, button:active {
+  border-color: transparent;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexHorizonCenter {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=common.css.map */

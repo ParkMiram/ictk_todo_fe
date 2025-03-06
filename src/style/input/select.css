@@ -1,0 +1,71 @@
+.selectContainer {
+  position: relative;
+  flex: 1;
+  height: 2.5rem;
+}
+.selectContainer .selectWrap {
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #FFFFFF;
+}
+.selectContainer .selectWrap .listWrap {
+  flex: 1;
+  width: 100%;
+}
+.selectContainer .selectWrap .listWrap .selected {
+  width: 100%;
+  min-height: calc(2.5rem - 4px);
+  display: flex;
+  align-items: center;
+}
+.selectContainer .selectWrap .listWrap .selected .option {
+  flex: 1;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+}
+.selectContainer .selectWrap .listWrap .selected .open {
+  transform: rotateZ(0deg);
+  transition: transform 0.3s ease;
+  margin-right: 0.75rem;
+}
+.selectContainer .selectWrap .listWrap .dataList {
+  width: 100%;
+  margin-top: 0.0625rem;
+}
+.selectContainer .selectWrap .listWrap .dataList .list {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+}
+.selectContainer .selectWrap .listWrap .dataList .list .option {
+  font-weight: 500;
+  color: #5A636A;
+  font-size: 14px;
+}
+.selectContainer .selectWrap .listWrap .dataList .list:hover {
+  background-color: #F8F8F8;
+}
+.selectContainer .selectWrap .listWrap .dataList .list:hover .option {
+  color: #000000;
+}
+.selectContainer .selectWrap .listWrap .dataList .list.on {
+  background-color: #E6E8EB;
+  font-weight: bold;
+}
+.selectContainer .selectWrap .listWrap .dataList .list.on .option {
+  color: #000000;
+}
+.selectContainer .selectWrap.active {
+  transition: height 0.3s ease;
+}
+.selectContainer .selectWrap.active .listWrap .open {
+  transform: rotateZ(180deg);
+  transition: transform 0.3s ease;
+}
+
+/*# sourceMappingURL=select.css.map */

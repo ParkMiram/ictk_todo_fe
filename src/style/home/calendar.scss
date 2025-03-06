@@ -1,0 +1,71 @@
+@import "../root";
+
+.calendarContainer {
+  background-color: $white;
+  border-radius: $px16;
+  padding: $px20;
+  width: 100%;
+  border: {
+    left: 2px solid $black40;
+    right: 2px solid $black40;
+    top: 2px solid $black40;
+    bottom: 2px dashed $black40;
+  }
+  .calendarHeader {
+    @include middleCenter;
+    margin-bottom: $px20;
+    button {
+      background-color: transparent;
+      outline: none;
+      border: 0;
+      height: 18px;
+    }
+    b {
+      font-size: 24px;
+      margin: {
+        right: $px40;
+        left: $px40;
+      }
+    }
+  }
+  .calendarWeek {
+    @include horizonBetween;
+    border: 1px solid $black20;
+    background-color: $black10;
+    border-radius: $px16;
+    .week{
+      width: calc((100% - $px20) / 7);
+      text-align: center;
+      margin: $px10;
+    }
+  }
+  .calendarDays {
+    @include flexColumn;
+    .day {
+      @include horizonCenter;
+      width: 100%;
+      p {
+        width: calc((100% - $px40) / 7);
+        margin: $px20;
+      }
+      .current {
+        text-align: center;
+        height: $px40;
+        cursor: pointer;
+        color: $black50;
+        &.today {
+          font-weight: bold;
+          color: $white;
+          @include verticalCenter;
+          span {
+            background-color: $mainColor;
+            width: $px30;
+            height: $px30;
+            border-radius: 50%;
+            @include middleCenter;
+          }
+        }
+      }
+    }
+  }
+}

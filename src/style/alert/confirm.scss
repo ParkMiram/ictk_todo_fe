@@ -1,0 +1,11 @@
+@import "../root";
+
+.confirmButton {
+  @include flexRow;
+  justify-content: flex-end;
+  .buttonWrap {
+    &:first-child {
+      margin-right: $px10;
+    }
+  }
+}

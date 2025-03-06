@@ -1,0 +1,44 @@
+@import "../root";
+
+.checkbox[type="checkbox"] {
+  display: none;
+}
+
+.checkboxLabel {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: $px15;
+}
+
+.checkboxLabel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: $px20;
+  height: $px20;
+  border: 1px solid $black40;
+  border-radius: 50%;
+  background-color: $white;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox[type="checkbox"]:checked + .checkboxLabel::before {
+  background-color: $black40;
+  border-color: $black40;
+}
+
+.checkbox[type="checkbox"]:checked + .checkboxLabel::after {
+  content: '\2713';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  color: white;
+  font-size: $px14;
+}
+
+.checkbox[type="checkbox"]:checked + .checkboxLabel {
+  color: $black50;
+  text-decoration: line-through;
+}

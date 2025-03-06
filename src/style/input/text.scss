@@ -1,0 +1,32 @@
+@import "../root";
+
+.textInput {
+  border: none;
+  flex: 1;
+  height: 100%;
+  outline: none;
+  padding: $px8 $px8 $px8 $px12;
+  background-color: transparent;
+}
+.delete {
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: $px8;
+  background-color: transparent;
+  opacity: .7;
+  transition: .1s ease-in-out;
+  &:hover,
+  &:focus {
+    opacity: 1;
+    transition: .1s ease-in-out;
+  }
+  .deleteIcon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,47 @@
+@import "../root";
+
+.homeContainer {
+  background-color: rgba(0, 86, 255, 10%);
+  width: 100%;
+  height: 100vh;
+  padding: $px20;
+  overflow: auto;
+  .homeWrap {
+    max-width: 700px;
+    height: 100%;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    .header {
+      margin-bottom: $px20;
+      padding: {
+        left: $px20;
+        right: $px20;
+      }
+      @include horizonBetween;
+      .logo {
+        display: inline-block;
+        border-radius: $px16;
+        @include horizonCenter;
+        img {
+          height: $px20;
+        }
+        b {
+          margin-left: $px10;
+          font-size: $px30;
+          color: $mainColor;
+        }
+      }
+      .logout {
+        .buttonWrap {
+          background-color: transparent;
+          .button {
+            background-color: transparent;
+            font-size: $px20;
+          }
+        }
+      }
+    }
+  }
+}

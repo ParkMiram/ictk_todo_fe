@@ -1,0 +1,74 @@
+@import "../root";
+
+.selectContainer {
+  position: relative;
+  flex: 1;
+  height: $px40;
+  .selectWrap {
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $white;
+    .listWrap {
+      flex: 1;
+      width: 100%;
+      .selected {
+        width: 100%;
+        min-height: calc($px40 - 4px); // border 값 뺌
+        @include horizonCenter;
+        .option {
+          flex: 1;
+          padding: {
+            left: $px12;
+            right: $px12;
+          }
+          background-color: transparent;
+          font-weight: 500;
+          font-size: 14px;
+        }
+        .open {
+          transform: rotateZ(0deg);
+          transition: transform .3s ease;
+          margin-right: $px12;
+        }
+      }
+      .dataList {
+        width: 100%;
+        margin-top: $px1;
+        .list {
+          padding: $px8 $px12;
+          font-weight: 500;
+          .option {
+            font-weight: 500;
+            color: $black60;
+            font-size: 14px;
+          }
+          &:hover {
+            background-color: $white10;
+            .option {
+              color: #000000;
+            }
+          }
+          &.on {
+            background-color: $black20;
+            font-weight: bold;
+            .option {
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+    &.active {
+      transition: height .3s ease;
+      .listWrap {
+        .open {
+          transform: rotateZ(180deg);
+          transition: transform .3s ease;
+        }
+      }
+    }
+  }
+}

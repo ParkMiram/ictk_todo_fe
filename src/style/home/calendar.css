@@ -1,0 +1,76 @@
+.calendarContainer {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  width: 100%;
+  border-left: 2px solid #ADB4BA;
+  border-right: 2px solid #ADB4BA;
+  border-top: 2px solid #ADB4BA;
+  border-bottom: 2px dashed #ADB4BA;
+}
+.calendarContainer .calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.calendarContainer .calendarHeader button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  height: 18px;
+}
+.calendarContainer .calendarHeader b {
+  font-size: 24px;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+}
+.calendarContainer .calendarWeek {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #E6E8EB;
+  background-color: #F2F4F5;
+  border-radius: 1rem;
+}
+.calendarContainer .calendarWeek .week {
+  width: calc((100% - 1.25rem) / 7);
+  text-align: center;
+  margin: 0.625rem;
+}
+.calendarContainer .calendarDays {
+  display: flex;
+  flex-direction: column;
+}
+.calendarContainer .calendarDays .day {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.calendarContainer .calendarDays .day p {
+  width: calc((100% - 2.5rem) / 7);
+  margin: 1.25rem;
+}
+.calendarContainer .calendarDays .day .current {
+  text-align: center;
+  height: 2.5rem;
+  cursor: pointer;
+  color: #778088;
+}
+.calendarContainer .calendarDays .day .current.today {
+  font-weight: bold;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+.calendarContainer .calendarDays .day .current.today span {
+  background-color: #0056ff;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=calendar.css.map */

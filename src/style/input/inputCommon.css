@@ -1,0 +1,88 @@
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+.textContainer:has(.selectContainer) {
+  height: 2.5rem;
+}
+.textContainer:has(.active) {
+  position: relative;
+  z-index: 1;
+}
+.textContainer .label {
+  font-size: 14px;
+  color: #5A636A;
+  font-weight: 500;
+  min-width: 1.875rem;
+}
+.textContainer .textWrap {
+  position: relative;
+  background-color: #F8F8F8;
+}
+.textContainer .textWrap .textInput {
+  max-width: calc(100% - 24px);
+}
+.textContainer .textWrap .delete {
+  position: absolute;
+  right: 0;
+  outline: none;
+}
+.textContainer .textWrap,
+.textContainer .selectWrap {
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 2px solid #D5D9E0;
+  transition: 0.1s ease-in-out;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.textContainer .textWrap:hover, .textContainer .textWrap:focus,
+.textContainer .selectWrap:hover,
+.textContainer .selectWrap:focus {
+  border-color: #ADB4BA;
+}
+.textContainer .textWrap:focus-within,
+.textContainer .selectWrap:focus-within {
+  background-color: #FFFFFF;
+  transition: 0.1s ease-in-out;
+}
+.textContainer .textWrap:has(.textInput:read-only), .textContainer .textWrap:has(.textInput:disabled),
+.textContainer .selectWrap:has(.textInput:read-only),
+.textContainer .selectWrap:has(.textInput:disabled) {
+  background-color: #F2F4F5;
+  border-color: #D5D9E0 !important;
+}
+.textContainer.outside .label {
+  margin-bottom: 0.5rem;
+}
+.textContainer.outsideLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.textContainer.outsideLeft .label {
+  margin-right: 0.625rem;
+}
+.textContainer.outsideLeft .textWrap {
+  flex: 1;
+}
+.textContainer.inside .label, .textContainer.icon .label {
+  margin-left: 0.9375rem;
+}
+.textContainer.inside .selectContainer .selectWrap, .textContainer.icon .selectContainer .selectWrap {
+  align-items: normal;
+}
+.textContainer.inside .selectContainer .selectWrap .label, .textContainer.icon .selectContainer .selectWrap .label {
+  margin-right: 0.9375rem;
+  display: flex;
+  align-items: center;
+}
+.textContainer.inside .selectContainer .selectWrap .listWrap, .textContainer.icon .selectContainer .selectWrap .listWrap {
+  border-left: 1px solid #E6E8EB;
+}
+.textContainer.icon .selectContainer .selectWrap .label {
+  width: 1.25rem;
+}
+
+/*# sourceMappingURL=inputCommon.css.map */

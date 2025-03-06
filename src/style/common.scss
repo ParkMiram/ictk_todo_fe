@@ -1,0 +1,36 @@
+@import "root";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  #root {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+}
+
+// flex
+.flex {
+  display: flex;
+}
+.flexHorizonCenter {
+  @include horizonCenter;
+}

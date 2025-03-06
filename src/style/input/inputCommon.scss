@@ -1,0 +1,102 @@
+@import "../root";
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  &:has(.selectContainer) {
+    height: $px40;
+  }
+  &:has(.active) {
+    position: relative;
+    z-index: 1;
+  }
+  .label {
+    font-size: 14px;
+    color: $black60;
+    font-weight: 500;
+    min-width: $px30;
+  }
+  .textWrap {
+    position: relative;
+    background-color: $white10;
+    .textInput {
+      max-width: calc(100% - 24px);
+    }
+    .delete {
+      position: absolute;
+      right: 0;
+      outline: none;
+    }
+  }
+  .textWrap,
+  .selectWrap {
+    height: $px40;
+    border-radius: $px16;
+    border: 2px solid $boxColor;
+    transition: .1s ease-in-out;
+    box-shadow: $boxShadow;
+    @include horizonCenter;
+    &:hover,
+    &:focus {
+      border-color: $black40;
+    }
+    &:focus-within {
+      background-color: $white;
+      transition: .1s ease-in-out;
+    }
+    // readOnly
+    &:has(.textInput:read-only),
+    &:has(.textInput:disabled) {
+      background-color: $black10;
+      border-color: $boxColor !important;
+    }
+  }
+  // ======= setStyle =======
+  // outside
+  &.outside {
+    .label {
+      margin-bottom: $px8;
+    }
+  }
+  // outsideLeft
+  &.outsideLeft {
+    @include flexRowCenter;
+    .label {
+      margin-right: $px10;
+    }
+    .textWrap {
+      flex: 1;
+    }
+  }
+  // inside, icon
+  &.inside,
+  &.icon {
+    .label {
+      margin-left: $px15;
+    }
+    // select
+    .selectContainer {
+      .selectWrap {
+        align-items: normal;
+        .label {
+          margin-right: $px15;
+          @include horizonCenter;
+        }
+        .listWrap {
+          border-left: 1px solid $black20;
+        }
+      }
+    }
+  }
+  // icon
+  &.icon {
+    // select
+    .selectContainer {
+      .selectWrap {
+        .label {
+          width: $px20;
+        }
+      }
+    }
+  }
+}

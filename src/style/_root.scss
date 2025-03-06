@@ -1,0 +1,71 @@
+// color
+$mainColor: #0056ff;
+$black: #000000;
+$black70: #262C31;
+$black60: #5A636A;
+$black50: #778088;
+$black40: #ADB4BA;
+$black30: #CCD1D7;
+$black20: #E6E8EB;
+$black10: #F2F4F5;
+// ---------------
+$white: #FFFFFF;
+$white10: #F8F8F8;
+// ---------------
+$boxColor: #D5D9E0;
+$boxShadow: 1px 1px 4px rgba(0 0 0 / 10%);
+
+// rem
+$px50: 3.125rem;
+$px40: 2.5rem;
+$px30: 1.875rem;
+$px20: 1.25rem;
+$px16: 1rem;
+$px15: .9375rem;
+$px14: .875rem;
+$px12: .75rem;
+$px10: .625rem;
+$px8: .5rem;
+$px5: .3125rem;
+$px3: 0.1875rem;
+$px1: .0625rem;
+
+// flex
+@mixin middleCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin horizonCenter {
+  display: flex;
+  align-items: center;
+}
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+}
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flexRowCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@mixin horizonBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// transform
+@mixin transformCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}

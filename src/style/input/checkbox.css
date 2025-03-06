@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.checkbox[type=checkbox] {
+  display: none;
+}
+
+.checkboxLabel {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+.checkboxLabel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #ADB4BA;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox[type=checkbox]:checked + .checkboxLabel::before {
+  background-color: #ADB4BA;
+  border-color: #ADB4BA;
+}
+
+.checkbox[type=checkbox]:checked + .checkboxLabel::after {
+  content: "✓";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.checkbox[type=checkbox]:checked + .checkboxLabel {
+  color: #778088;
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=checkbox.css.map */

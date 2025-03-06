@@ -1,0 +1,60 @@
+@import "../root";
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  @include middleCenter;
+  .alertContainer {
+    animation: scaleUp .2s ease-in-out forwards;
+    min-width: 350px;
+    background-color: $white;
+    border-radius: $px16;
+    padding: $px20;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 10%);
+    &.hidden {
+      animation: scaleDown 0.2s ease-out forwards;
+    }
+    .alertTitle {
+      font-weight: bold;
+      margin-bottom: $px10;
+    }
+    .alertMessage {
+      margin-bottom: $px30;
+    }
+    .buttonWrap {
+      text-align: right;
+      .button {
+        width: auto;
+        min-width: 80px;
+        padding: $px5 $px10;
+        border-radius: $px10;
+      }
+    }
+  }
+}
+
+/* 애니메이션 */
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

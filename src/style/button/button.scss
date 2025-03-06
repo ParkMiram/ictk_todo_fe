@@ -1,0 +1,43 @@
+@import "../root";
+
+.buttonWrap {
+  .button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: $px16;
+    font-size: $px14;
+    &.primary {
+      color: #FFFFFF;
+      background-color: $mainColor;
+      &:hover {
+        background-color: #0a35a0;
+      }
+      &:focus {
+        outline: 3px solid rgba(0, 86, 255, 30%)
+      }
+    }
+    &.sub {
+      background-color: $black20;
+      &:hover {
+        background-color: $black30;
+      }
+      &:focus {
+        outline: 3px solid $black10;
+      }
+    }
+    &.warning {
+      background-color: #FFE5E5;
+      color: #FF3333;
+      &:hover {
+        background-color: #FFCCCC;
+      }
+      &:focus {
+        outline: 3px solid #FFF2F2;
+      }
+    }
+    &:active {
+      transform: scale(95%);
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.todoContainer {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  width: 100%;
+  border-left: 2px solid #ADB4BA;
+  border-right: 2px solid #ADB4BA;
+  border-bottom: 2px solid #ADB4BA;
+  display: flex;
+  flex-direction: column;
+}
+.todoContainer .titleWrap {
+  flex-shrink: 0;
+  padding-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid rgba(0, 86, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todoContainer .titleWrap .title {
+  font-weight: bold;
+}
+.todoContainer .titleWrap .title span {
+  color: #0056ff;
+}
+.todoContainer .titleWrap .addTodoButton .button {
+  width: 2.5rem;
+  height: 1.875rem;
+}
+.todoContainer .todoList {
+  flex-grow: 1;
+  overflow: auto;
+}
+.todoContainer .todoList .todoItem {
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todoContainer .todoList .todoItem:last-child {
+  margin-bottom: 0;
+}
+.todoContainer .todoList .todoItem .textWrap {
+  box-shadow: none;
+}
+.todoContainer .todoList .todoItem:has(.addTodoItem) .buttonWrap {
+  width: 3.125rem;
+  margin-right: 0.1875rem;
+  height: 2.125rem;
+}
+.todoContainer .todoList .todoItem .addTodoItem {
+  width: calc(100% - 3.125rem - 0.625rem - 0.1875rem);
+  margin-right: 0.625rem;
+}
+.todoContainer .todoList .todoItem .mdfTodo {
+  margin-left: 0.625rem;
+  position: relative;
+}
+.todoContainer .todoList .todoItem .mdfTodo .button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.625rem;
+  background-color: transparent;
+  outline: none;
+}
+.todoContainer .todoList .todoItem .deleteTodo {
+  margin-right: 0.3125rem;
+  font-size: 0.625rem;
+  height: 100%;
+}
+.todoContainer .todoList .todoItem .deleteTodo .button {
+  font-size: 1.25rem;
+  background-color: transparent;
+  color: #262C31;
+}
+.todoContainer .todoList .noTodo {
+  color: #ADB4BA;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=todo.css.map */

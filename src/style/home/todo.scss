@@ -1,0 +1,86 @@
+@import "../root";
+
+.todoContainer {
+  background-color: $white;
+  border-radius: $px16;
+  padding: $px20;
+  width: 100%;
+  //height: 100%;
+  border: {
+    left: 2px solid $black40;
+    right: 2px solid $black40;
+    bottom: 2px solid $black40;
+  }
+  @include flexColumn;
+  .titleWrap {
+    flex-shrink: 0;
+    padding-bottom: $px10;
+    margin-bottom: $px20;
+    border-bottom: 3px solid rgba(0, 86, 255, 10%);
+    @include horizonBetween;
+    .title {
+      font-weight: bold;
+      span {
+        color: $mainColor;
+      }
+    }
+    .addTodoButton {
+      .button {
+        width: $px40;
+        height: $px30;
+      }
+    }
+  }
+  .todoList {
+    flex-grow: 1;
+    overflow: auto;
+    .todoItem {
+      margin-bottom: $px10;
+      @include horizonBetween;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .textWrap {
+        box-shadow: none;
+      }
+      &:has(.addTodoItem) {
+        .buttonWrap {
+          width: $px50;
+          margin-right: $px3;
+          height: calc($px40 - $px3 - $px3);
+        }
+      }
+      .addTodoItem {
+        width: calc(100% - $px50 - $px10 - $px3);
+        margin-right: $px10;
+      }
+      .mdfTodo {
+        margin-left: $px10;
+        position: relative;
+        .button {
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: $px10;
+          background-color: transparent;
+          outline: none;
+        }
+      }
+      .deleteTodo {
+        margin-right: $px5;
+        font-size: $px10;
+        height: 100%;
+        .button {
+          font-size: $px20;
+          background-color: transparent;
+          color: $black70;
+        }
+      }
+    }
+    .noTodo {
+      color: $black40;
+      font-size: $px12;
+      font-weight: bold;
+    }
+  }
+}
